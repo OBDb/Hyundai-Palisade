@@ -4,6 +4,11 @@ test_cases:
     HYUNDAI_TURN_R: 1
   response: |-
     778100B62BC08A0579C
+    77821BC0200011CAAAA
+- expected_values:
+    HYUNDAI_TURN_R: 1
+  response: |-
+    778100B62BC08A0579C
     77821BC0400011CAAAA
 - expected_values:
     HYUNDAI_TURN_R: 1
