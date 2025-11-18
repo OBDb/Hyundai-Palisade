@@ -3,3 +3,9 @@ test_cases:
 - expected_values:
     MIL_TIME: 0
   response: 7E804414D0000
+- expected_values:
+    MIL_TIME: 19
+  response: 7E804414D0013
+- expected_values:
+    MIL_TIME: 20
+  response: 7E804414D0014
