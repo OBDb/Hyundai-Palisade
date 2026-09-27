@@ -9,12 +9,12 @@ test_cases:
 - expected_values:
     ECT_1: 96
     ECT_1_SUP: 1
-    ECT_2: 91
+    ECT_2: 93
     ECT_2_SUP: 1
-  response: '7E8054167038883'
+  response: '7E8054167038885'
 - expected_values:
-    ECT_1: 99
+    ECT_1: 100
     ECT_1_SUP: 1
-    ECT_2: 90
+    ECT_2: 92
     ECT_2_SUP: 1
-  response: 7E8054167038B82
+  response: 7E8054167038C84
