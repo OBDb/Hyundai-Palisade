@@ -1,6 +1,14 @@
 command_id: 7E0.7E8.22E010
 test_cases:
 - expected_values:
+    HYUNDAI_MAF_RATE: 7.79976
+  response: |-
+    7E8101F62E010BB1F00
+    7E8210000001C000000
+    7E822A43D703DE91E00
+    7E823009682881CBA1E
+    7E824EF0AB81EAAAAAA
+- expected_values:
     HYUNDAI_MAF_RATE: 0
   response: |-
     7E8101F62E010BB1F00
