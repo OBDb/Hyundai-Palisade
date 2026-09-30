@@ -5,3 +5,8 @@ test_cases:
   response: |-
     7A8100B62B008F8FEC7
     7A821F000000000AAAA
+- expected_values:
+    HYUNDAI_BRAKE_SW: 0
+  response: |-
+    7A8100B62B008F8FEC7
+    7A821F000024000AAAA
