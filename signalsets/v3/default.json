@@ -1,14 +1,14 @@
 { "commands": [
 { "hdr": "730", "rax": "738", "cmd": {"22": "F010"}, "freq": 0.25, "dbgfilter": { "to": 2022, "years": [2025], "from": 2027 },
   "signals": [
-    {"id": "PALISADE_WHEEL_FR_VSS_HD",           "path": "Movement",    "fmt": {"bix": 32,  "len": 16, "blsb": true, "max": 2047,                                 "div": 32,                                                   "unit": "kilometersPerHour"      },                  "name": "Front right wheel speed, high resolution"},
-    {"id": "PALISADE_WHEEL_FL_VSS_HD",           "path": "Movement",    "fmt": {"bix": 48,  "len": 16, "blsb": true, "max": 2047,                                 "div": 32,                                                   "unit": "kilometersPerHour"      },                  "name": "Front left wheel speed, high resolution"},
-    {"id": "PALISADE_WHEEL_RR_VSS_HD",           "path": "Movement",    "fmt": {"bix": 64,  "len": 16, "blsb": true, "max": 2047,                                 "div": 32,                                                   "unit": "kilometersPerHour"      },                  "name": "Rear right wheel speed, high resolution"},
-    {"id": "PALISADE_WHEEL_RL_VSS_HD",           "path": "Movement",    "fmt": {"bix": 80,  "len": 16, "blsb": true, "max": 2047,                                 "div": 32,                                                   "unit": "kilometersPerHour"      },                  "name": "Rear left wheel speed, high resolution"},
-    {"id": "PALISADE_STEERING_ANGLE",            "path": "Control",     "fmt": {"bix": 96,  "len": 16, "blsb": true, "max": 3276.7, "min": -3276.8,               "div": 10,                   "sign": true,                   "unit": "degrees"                },                  "name": "Steering wheel angle"},
-    {"id": "PALISADE_LATERAL_ACCELERATION",      "path": "Orientation", "fmt": {"bix": 112, "len": 16, "blsb": true, "max": 4.177,  "min": -4.177,  "mul": 8.354, "div": 65535, "add": -4.177,                                 "unit": "metersPerSecondSquared" },                  "name": "Lateral acceleration"},
-    {"id": "PALISADE_LONGITUDINAL_ACCELERATION", "path": "Orientation", "fmt": {"bix": 128, "len": 16, "blsb": true, "max": 4.177,  "min": -4.177,  "mul": 8.354, "div": 65535, "add": -4.177,                                 "unit": "metersPerSecondSquared" },                  "name": "Longitudinal acceleration"},
-    {"id": "PALISADE_YAW_RATE",                  "path": "Orientation", "fmt": {"bix": 144, "len": 8,  "max": 1.275,                                "div": 200,                                              "unit": "degrees" },                               "name": "Yaw rate"}
+    {"id": "PALISADE_WHEEL_FR_VSS_HD",           "path": "Movement",    "fmt": {"bix": 32,  "len": 16, "blsb": true, "max": 2032,                                 "div": 32,                                 "nullmax": 2032,                   "unit": "kilometersPerHour"      },                  "name": "Front right wheel speed, high resolution"},
+    {"id": "PALISADE_WHEEL_FL_VSS_HD",           "path": "Movement",    "fmt": {"bix": 48,  "len": 16, "blsb": true, "max": 2032,                                 "div": 32,                                 "nullmax": 2032,                   "unit": "kilometersPerHour"      },                  "name": "Front left wheel speed, high resolution"},
+    {"id": "PALISADE_WHEEL_RR_VSS_HD",           "path": "Movement",    "fmt": {"bix": 64,  "len": 16, "blsb": true, "max": 2032,                                 "div": 32,                                 "nullmax": 2032,                   "unit": "kilometersPerHour"      },                  "name": "Rear right wheel speed, high resolution"},
+    {"id": "PALISADE_WHEEL_RL_VSS_HD",           "path": "Movement",    "fmt": {"bix": 80,  "len": 16, "blsb": true, "max": 2032,                                 "div": 32,                                 "nullmax": 2032,                   "unit": "kilometersPerHour"      },                  "name": "Rear left wheel speed, high resolution"},
+    {"id": "PALISADE_STEERING_ANGLE",            "path": "Control",     "fmt": {"bix": 96,  "len": 16, "blsb": true, "max": 3276.7, "min": -3276.8,               "div": 10,                   "sign": true,                                    "unit": "degrees"                },                  "name": "Steering wheel angle"},
+    {"id": "PALISADE_LATERAL_ACCELERATION",      "path": "Orientation", "fmt": {"bix": 112, "len": 16, "blsb": true, "max": 4.177,  "min": -4.177,  "mul": 8.354, "div": 65535, "add": -4.177,                                                  "unit": "metersPerSecondSquared" },                  "name": "Lateral acceleration"},
+    {"id": "PALISADE_LONGITUDINAL_ACCELERATION", "path": "Orientation", "fmt": {"bix": 128, "len": 16, "blsb": true, "max": 4.177,  "min": -4.177,  "mul": 8.354, "div": 65535, "add": -4.177,                                                  "unit": "metersPerSecondSquared" },                  "name": "Longitudinal acceleration"},
+    {"id": "PALISADE_YAW_RATE",                  "path": "Orientation", "fmt": {"bix": 144, "len": 8,  "max": 1.275,                                "div": 200,                                                               "unit": "degrees" },                               "name": "Yaw rate"}
   ]},
 { "hdr": "770", "rax": "778", "cmd": {"22": "BC03"}, "freq": 1, "dbgfilter": { "to": 2019, "from": 2027 },
   "signals": [
@@ -159,8 +159,8 @@
   ]},
 { "hdr": "7B3", "rax": "7BB", "cmd": {"22": "0102"}, "freq": 1, "dbgfilter": { "to": 2025, "from": 2027 },
   "signals": [
-    {"id": "PALISADE_HVAC_COOLANT_T",  "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Coolant temperature"},
-    {"id": "PALISADE_HVAC_INVERTER_T", "path": "Engine", "fmt": {"bix": 96, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Inverter temperature"}
+    {"id": "PALISADE_HVAC_COOLANT_T",  "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "nullmax": 87.5, "unit": "celsius" }, "name": "Coolant temperature"},
+    {"id": "PALISADE_HVAC_INVERTER_T", "path": "Engine", "fmt": {"bix": 96, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "nullmax": 87.5, "unit": "celsius" }, "name": "Inverter temperature"}
   ]},
 { "hdr": "7C6", "rax": "7CE", "cmd": {"22": "B002"}, "freq": 5, "dbgfilter": { "to": 2019, "from": 2027 },
   "signals": [
@@ -414,13 +414,20 @@
   "signals": [
     {"id": "PALISADE_ATF_TEMP", "path": "Transmission", "fmt": {"bix": 16, "len": 8, "max": 255, "mul": 9, "div": 5, "add": -40, "unit": "fahrenheit" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E001"}, "freq": 5, "dbgfilter": { "to": 2019, "from": 2027 },
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E001"}, "freq": 5, "filter": { "to": 2025 }, "dbgfilter": { "to": 2019 },
   "signals": [
-    {"id": "PALISADE_BATTERY_V",                "path": "Battery", "fmt": {"bix": 32,  "len": 8, "max": 17.37,             "mul": 17.37, "div": 255,                             "unit": "volts"   }, "name": "Battery voltage"},
-    {"id": "PALISADE_BATTERY_V_AFTER_IGNITION", "path": "Battery", "fmt": {"bix": 40,  "len": 8, "max": 17.37,             "mul": 17.37, "div": 255,                             "unit": "volts"   }, "name": "Battery voltage after ignition"},
-    {"id": "PALISADE_BATTERY_SOC",              "path": "Battery", "fmt": {"bix": 48,  "len": 8, "max": 255,                                                     "nullmax": 255, "unit": "percent" }, "name": "12V battery state of charge"},
-    {"id": "PALISADE_EIT",                      "path": "Engine",  "fmt": {"bix": 264, "len": 8, "max": 143,   "min": -48, "mul": 3,     "div": 4,   "add": -48,                 "unit": "celsius" }, "name": "Intake air temperature"},
-    {"id": "PALISADE_EOT",                      "path": "Engine",  "fmt": {"bix": 272, "len": 8, "max": 143,   "min": -48, "mul": 3,     "div": 4,   "add": -48,                 "unit": "celsius" }, "name": "Engine oil temperature",         "suggestedMetric": "engineOilTemperature"}
+    {"id": "PALISADE_BATTERY_V",                "path": "Battery", "fmt": {"bix": 32,  "len": 8, "max": 17.37,             "mul": 17.37, "div": 255,             "nullmin": 0,                 "unit": "volts"   }, "name": "Battery voltage"},
+    {"id": "PALISADE_BATTERY_V_AFTER_IGNITION", "path": "Battery", "fmt": {"bix": 40,  "len": 8, "max": 17.37,             "mul": 17.37, "div": 255,             "nullmin": 0,                 "unit": "volts"   }, "name": "Battery voltage after ignition"},
+    {"id": "PALISADE_BATTERY_SOC",              "path": "Battery", "fmt": {"bix": 48,  "len": 8, "max": 255,                                                                   "nullmax": 255, "unit": "percent" }, "name": "12V battery state of charge"},
+    {"id": "PALISADE_EIT",                      "path": "Engine",  "fmt": {"bix": 264, "len": 8, "max": 143,   "min": -48, "mul": 3,     "div": 4,   "add": -48,                               "unit": "celsius" }, "name": "Intake air temperature"},
+    {"id": "PALISADE_EOT",                      "path": "Engine",  "fmt": {"bix": 272, "len": 8, "max": 143,   "min": -48, "mul": 3,     "div": 4,   "add": -48,                               "unit": "celsius" }, "name": "Engine oil temperature",         "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E001"}, "freq": 5, "filter": { "from": 2026 }, "dbgfilter": { "from": 2027 },
+  "signals": [
+    {"id": "PALISADE_BATTERY_V_26",                "path": "Battery", "fmt": {"bix": 32,  "len": 8, "max": 17.37,             "mul": 17.37, "div": 255,             "nullmin": 0, "unit": "volts"   }, "name": "Battery voltage"},
+    {"id": "PALISADE_BATTERY_V_AFTER_IGNITION_26", "path": "Battery", "fmt": {"bix": 40,  "len": 8, "max": 17.37,             "mul": 17.37, "div": 255,             "nullmin": 0, "unit": "volts"   }, "name": "Battery voltage after ignition"},
+    {"id": "PALISADE_EIT_26",                      "path": "Engine",  "fmt": {"bix": 264, "len": 8, "max": 143,   "min": -48, "mul": 3,     "div": 4,   "add": -48,               "unit": "celsius" }, "name": "Intake air temperature"},
+    {"id": "PALISADE_EOT_26",                      "path": "Engine",  "fmt": {"bix": 272, "len": 8, "max": 143,   "min": -48, "mul": 3,     "div": 4,   "add": -48,               "unit": "celsius" }, "name": "Engine oil temperature",         "suggestedMetric": "engineOilTemperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E002"}, "freq": 5, "dbgfilter": { "to": 2019, "from": 2027 },
   "signals": [
@@ -523,11 +530,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E021"}, "freq": 1, "dbgfilter": { "to": 2019, "from": 2027 },
   "signals": [
-    {"id": "PALISADE_TB_PRES", "path": "Engine", "fmt": {"bix": 56,  "len": 16, "max": 543,  "mul": 0.008291,    "unit": "kilopascal" }, "name": "Turbo boost pressure"},
-    {"id": "PALISADE_WG_V",    "path": "Engine", "fmt": {"bix": 392, "len": 16, "max": 9.99, "mul": 0.000152588, "unit": "volts"      }, "name": "Waste gate voltage"},
-    {"id": "PALISADE_WG_DUTY", "path": "Engine", "fmt": {"bix": 408, "len": 16, "max": 199,  "mul": 0.00305176,  "unit": "percent"    }, "name": "Waste gate duty"},
-    {"id": "PALISADE_WG_POS",  "path": "Engine", "fmt": {"bix": 424, "len": 16, "max": 399,  "mul": 0.00610352,  "unit": "percent"    }, "name": "Waste gate position"},
-    {"id": "PALISADE_WG_SP",   "path": "Engine", "fmt": {"bix": 440, "len": 16, "max": 399,  "mul": 0.00610352,  "unit": "percent"    }, "name": "Waste gate set point"}
+    {"id": "PALISADE_TB_PRES", "path": "Engine", "fmt": {"bix": 56, "len": 16, "max": 543, "mul": 0.008291, "unit": "kilopascal" }, "name": "Turbo boost pressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E023"}, "freq": 1, "dbgfilter": { "to": 2025, "from": 2027 },
   "signals": [
@@ -694,35 +697,35 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "0101"}, "freq": 1, "filter": { "from": 2026 }, "dbgfilter": { "from": 2027 },
   "signals": [
-    {"id": "PALISADE_HVBAT_SOC",        "path": "Battery", "fmt": {"bix": 32,  "len": 8,  "max": 100,                     "div": 2,                "unit": "percent"       }, "name": "HV battery charge, dashboard",     "suggestedMetric": "stateOfCharge"},
-    {"id": "PALISADE_HVBAT_CHARGING",   "path": "Battery", "fmt": {"bix": 72,  "len": 1,  "max": 1,                                                "unit": "offon"         }, "name": "HV battery charging",              "suggestedMetric": "isCharging"},
-    {"id": "PALISADE_HVBAT_PLUG_RAPD",  "path": "Battery", "fmt": {"bix": 73,  "len": 1,  "max": 1,                                                "unit": "offon"         }, "name": "Rapid charge port state",          "suggestedMetric": "pluggedIn"},
-    {"id": "PALISADE_HVBAT_PLUG_NORM",  "path": "Battery", "fmt": {"bix": 74,  "len": 1,  "max": 1,                                                "unit": "offon"         }, "name": "Normal charge port state",         "suggestedMetric": "pluggedIn"},
-    {"id": "PALISADE_HVBAT_CURR",       "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 6553.5,                  "div": 10,               "unit": "amps"          }, "name": "HV battery current"},
-    {"id": "PALISADE_HVBAT_VDC",        "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 6553.5,                  "div": 10,               "unit": "volts"         }, "name": "HV battery DC voltage"},
-    {"id": "PALISADE_HVBAT_T_MAX",      "path": "Battery", "fmt": {"bix": 112, "len": 8,  "max": 127,        "min": -127,            "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, maximum"},
-    {"id": "PALISADE_HVBAT_T_MIN",      "path": "Battery", "fmt": {"bix": 120, "len": 8,  "max": 127,        "min": -127,            "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, minimum"},
-    {"id": "PALISADE_HVBAT_MOD1_T",     "path": "Battery", "fmt": {"bix": 128, "len": 8,  "max": 127,        "min": -127,            "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, module 1"},
-    {"id": "PALISADE_HVBAT_MOD2_T",     "path": "Battery", "fmt": {"bix": 136, "len": 8,  "max": 127,        "min": -127,            "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, module 2"},
-    {"id": "PALISADE_HVBAT_MOD3_T",     "path": "Battery", "fmt": {"bix": 144, "len": 8,  "max": 127,        "min": -127,            "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, module 3"},
-    {"id": "PALISADE_HVBAT_MOD4_T",     "path": "Battery", "fmt": {"bix": 152, "len": 8,  "max": 127,        "min": -127,            "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, module 4"},
-    {"id": "PALISADE_HVBAT_INLET_T",    "path": "Battery", "fmt": {"bix": 176, "len": 8,  "max": 127,        "min": -127,            "sign": true, "unit": "celsius"       }, "name": "Battery inlet temperature"},
-    {"id": "PALISADE_C_V_MAX",          "path": "Battery", "fmt": {"bix": 184, "len": 8,  "max": 5.1,                     "div": 50,               "unit": "volts"         }, "name": "Maximum cell voltage"},
-    {"id": "PALISADE_C_V_MAX_ID",       "path": "Battery", "fmt": {"bix": 192, "len": 8,  "max": 255,                                              "unit": "scalar"        }, "name": "Maximum cell voltage id",          "description": "The id of the cell with the highest voltage."},
-    {"id": "PALISADE_C_V_MIN",          "path": "Battery", "fmt": {"bix": 200, "len": 8,  "max": 5.1,                     "div": 50,               "unit": "volts"         }, "name": "Minimum cell voltage"},
-    {"id": "PALISADE_C_V_MIN_ID",       "path": "Battery", "fmt": {"bix": 208, "len": 8,  "max": 255,                                              "unit": "scalar"        }, "name": "Minimum cell voltage id",          "description": "The id of the cell with the lowest voltage."},
-    {"id": "PALISADE_HVBAT_FAN_STATUS", "path": "Battery", "fmt": {"bix": 216, "len": 8,  "max": 255,                                              "unit": "scalar"        }, "name": "HV battery fan status"},
-    {"id": "PALISADE_HVBAT_FAN",        "path": "Battery", "fmt": {"bix": 224, "len": 8,  "max": 255,                                              "unit": "hertz"         }, "name": "HV battery fan"},
-    {"id": "PALISADE_VPWR_V2",          "path": "Battery", "fmt": {"bix": 232, "len": 8,  "max": 25.5,                    "div": 10,               "unit": "volts"         }, "name": "Battery auxiliary voltage",        "suggestedMetric": "starterBatteryVoltage"},
-    {"id": "PALISADE_HVBAT_CHRG_TOT_C", "path": "Battery", "fmt": {"bix": 240, "len": 32, "max": 429496729,               "div": 10,               "unit": "ampereHours"   }, "name": "Total charge current"},
-    {"id": "PALISADE_HVBAT_DSCH_TOT_C", "path": "Battery", "fmt": {"bix": 272, "len": 32, "max": 429496729,               "div": 10,               "unit": "ampereHours"   }, "name": "Total discharge current"},
-    {"id": "PALISADE_HVBAT_CHRG_TOT_E", "path": "Battery", "fmt": {"bix": 304, "len": 32, "max": 429496729,               "div": 10,               "unit": "kilowattHours" }, "name": "Total charge energy"},
-    {"id": "PALISADE_HVBAT_DSCH_TOT_E", "path": "Battery", "fmt": {"bix": 336, "len": 32, "max": 429496729,               "div": 10,               "unit": "kilowattHours" }, "name": "Total discharge energy"},
-    {"id": "PALISADE_DRIVE_TIME",       "path": "Stats",   "fmt": {"bix": 368, "len": 32, "max": 4294967295,                                       "unit": "seconds"       }, "name": "Total drive time"},
-    {"id": "PALISADE_IGN",              "path": "Battery", "fmt": {"bix": 405, "len": 1,  "max": 1,                                                "unit": "offon"         }, "name": "Ignition"},
-    {"id": "PALISADE_INVRT_CV",         "path": "Battery", "fmt": {"bix": 408, "len": 16, "max": 65535,                                            "unit": "volts"         }, "name": "Inverter capacitor voltage"},
-    {"id": "PALISADE_RPM_7E4",          "path": "Engine",  "fmt": {"bix": 424, "len": 16, "max": 65535,                                            "unit": "rpm"           }, "name": "Drive motor speed"},
-    {"id": "PALISADE_ISO_R",            "path": "Battery", "fmt": {"bix": 456, "len": 16, "max": 65535,                                            "unit": "kiloohms"      }, "name": "Isolation resistance"}
+    {"id": "PALISADE_HVBAT_SOC",        "path": "Battery", "fmt": {"bix": 32,  "len": 8,  "max": 100,                       "div": 2,                "unit": "percent"       }, "name": "HV battery charge, dashboard",     "suggestedMetric": "stateOfCharge"},
+    {"id": "PALISADE_HVBAT_CHARGING",   "path": "Battery", "fmt": {"bix": 72,  "len": 1,  "max": 1,                                                  "unit": "offon"         }, "name": "HV battery charging",              "suggestedMetric": "isCharging"},
+    {"id": "PALISADE_HVBAT_PLUG_RAPD",  "path": "Battery", "fmt": {"bix": 73,  "len": 1,  "max": 1,                                                  "unit": "offon"         }, "name": "Rapid charge port state",          "suggestedMetric": "pluggedIn"},
+    {"id": "PALISADE_HVBAT_PLUG_NORM",  "path": "Battery", "fmt": {"bix": 74,  "len": 1,  "max": 1,                                                  "unit": "offon"         }, "name": "Normal charge port state",         "suggestedMetric": "pluggedIn"},
+    {"id": "PALISADE_HVBAT_CURR",       "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 6553.5,                    "div": 10,               "unit": "amps"          }, "name": "HV battery current"},
+    {"id": "PALISADE_HVBAT_VDC",        "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 6553.5,                    "div": 10,               "unit": "volts"         }, "name": "HV battery DC voltage"},
+    {"id": "PALISADE_HVBAT_T_MAX",      "path": "Battery", "fmt": {"bix": 112, "len": 8,  "max": 127,        "min": -127,              "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, maximum"},
+    {"id": "PALISADE_HVBAT_T_MIN",      "path": "Battery", "fmt": {"bix": 120, "len": 8,  "max": 127,        "min": -127,              "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, minimum"},
+    {"id": "PALISADE_HVBAT_MOD1_T",     "path": "Battery", "fmt": {"bix": 128, "len": 8,  "max": 127,        "min": -127,              "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, module 1"},
+    {"id": "PALISADE_HVBAT_MOD2_T",     "path": "Battery", "fmt": {"bix": 136, "len": 8,  "max": 127,        "min": -127,              "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, module 2"},
+    {"id": "PALISADE_HVBAT_MOD3_T",     "path": "Battery", "fmt": {"bix": 144, "len": 8,  "max": 127,        "min": -127,              "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, module 3"},
+    {"id": "PALISADE_HVBAT_MOD4_T",     "path": "Battery", "fmt": {"bix": 152, "len": 8,  "max": 127,        "min": -127,              "sign": true, "unit": "celsius"       }, "name": "HV battery temperature, module 4"},
+    {"id": "PALISADE_HVBAT_INLET_T",    "path": "Battery", "fmt": {"bix": 176, "len": 8,  "max": 127,        "min": -127,              "sign": true, "unit": "celsius"       }, "name": "Battery inlet temperature"},
+    {"id": "PALISADE_C_V_MAX",          "path": "Battery", "fmt": {"bix": 184, "len": 8,  "max": 5.1,                       "div": 50,               "unit": "volts"         }, "name": "Maximum cell voltage"},
+    {"id": "PALISADE_C_V_MAX_ID",       "path": "Battery", "fmt": {"bix": 192, "len": 8,  "max": 255,                                                "unit": "scalar"        }, "name": "Maximum cell voltage id",          "description": "The id of the cell with the highest voltage."},
+    {"id": "PALISADE_C_V_MIN",          "path": "Battery", "fmt": {"bix": 200, "len": 8,  "max": 5.1,                       "div": 50,               "unit": "volts"         }, "name": "Minimum cell voltage"},
+    {"id": "PALISADE_C_V_MIN_ID",       "path": "Battery", "fmt": {"bix": 208, "len": 8,  "max": 255,                                                "unit": "scalar"        }, "name": "Minimum cell voltage id",          "description": "The id of the cell with the lowest voltage."},
+    {"id": "PALISADE_HVBAT_FAN_STATUS", "path": "Battery", "fmt": {"bix": 216, "len": 8,  "max": 255,                                                "unit": "scalar"        }, "name": "HV battery fan status"},
+    {"id": "PALISADE_HVBAT_FAN",        "path": "Battery", "fmt": {"bix": 224, "len": 8,  "max": 255,                                                "unit": "hertz"         }, "name": "HV battery fan"},
+    {"id": "PALISADE_VPWR_V2",          "path": "Battery", "fmt": {"bix": 232, "len": 8,  "max": 25.5,                      "div": 10,               "unit": "volts"         }, "name": "Battery auxiliary voltage",        "suggestedMetric": "starterBatteryVoltage"},
+    {"id": "PALISADE_HVBAT_CHRG_TOT_C", "path": "Battery", "fmt": {"bix": 240, "len": 32, "max": 429496729,                 "div": 10,               "unit": "ampereHours"   }, "name": "Total charge current"},
+    {"id": "PALISADE_HVBAT_DSCH_TOT_C", "path": "Battery", "fmt": {"bix": 272, "len": 32, "max": 429496729,                 "div": 10,               "unit": "ampereHours"   }, "name": "Total discharge current"},
+    {"id": "PALISADE_HVBAT_CHRG_TOT_E", "path": "Battery", "fmt": {"bix": 304, "len": 32, "max": 429496729,                 "div": 10,               "unit": "kilowattHours" }, "name": "Total charge energy"},
+    {"id": "PALISADE_HVBAT_DSCH_TOT_E", "path": "Battery", "fmt": {"bix": 336, "len": 32, "max": 429496729,                 "div": 10,               "unit": "kilowattHours" }, "name": "Total discharge energy"},
+    {"id": "PALISADE_DRIVE_TIME",       "path": "Stats",   "fmt": {"bix": 368, "len": 32, "max": 4294967295,                                         "unit": "seconds"       }, "name": "Total drive time"},
+    {"id": "PALISADE_IGN",              "path": "Battery", "fmt": {"bix": 405, "len": 1,  "max": 1,                                                  "unit": "offon"         }, "name": "Ignition"},
+    {"id": "PALISADE_INVRT_CV",         "path": "Battery", "fmt": {"bix": 408, "len": 16, "max": 65535,                                              "unit": "volts"         }, "name": "Inverter capacitor voltage"},
+    {"id": "PALISADE_RPM_7E4",          "path": "Engine",  "fmt": {"bix": 424, "len": 16, "max": 32767,      "min": -32768,            "sign": true, "unit": "rpm"           }, "name": "Drive motor speed"},
+    {"id": "PALISADE_ISO_R",            "path": "Battery", "fmt": {"bix": 456, "len": 16, "max": 65535,                                              "unit": "kiloohms"      }, "name": "Isolation resistance"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "0102"}, "freq": 1, "filter": { "from": 2026 }, "dbgfilter": { "from": 2027 },
   "signals": [
