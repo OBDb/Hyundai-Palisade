@@ -1,5 +1,5 @@
 { "commands": [
-{ "hdr": "730", "rax": "738", "cmd": {"22": "F010"}, "freq": 0.25, "dbgfilter": { "to": 2022, "years": [2025], "from": 2027 },
+{ "hdr": "730", "rax": "738", "cmd": {"22": "F010"}, "freq": 0.25, "filter": { "to": 2025 }, "dbgfilter": { "to": 2022 },
   "signals": [
     {"id": "PALISADE_WHEEL_FR_VSS_HD",           "path": "Movement",    "fmt": {"bix": 32,  "len": 16, "blsb": true, "max": 2032,                                 "div": 32,                                 "nullmax": 2032,                   "unit": "kilometersPerHour"      },                  "name": "Front right wheel speed, high resolution"},
     {"id": "PALISADE_WHEEL_FL_VSS_HD",           "path": "Movement",    "fmt": {"bix": 48,  "len": 16, "blsb": true, "max": 2032,                                 "div": 32,                                 "nullmax": 2032,                   "unit": "kilometersPerHour"      },                  "name": "Front left wheel speed, high resolution"},
@@ -9,6 +9,17 @@
     {"id": "PALISADE_LATERAL_ACCELERATION",      "path": "Orientation", "fmt": {"bix": 112, "len": 16, "blsb": true, "max": 4.177,  "min": -4.177,  "mul": 8.354, "div": 65535, "add": -4.177,                                                  "unit": "metersPerSecondSquared" },                  "name": "Lateral acceleration"},
     {"id": "PALISADE_LONGITUDINAL_ACCELERATION", "path": "Orientation", "fmt": {"bix": 128, "len": 16, "blsb": true, "max": 4.177,  "min": -4.177,  "mul": 8.354, "div": 65535, "add": -4.177,                                                  "unit": "metersPerSecondSquared" },                  "name": "Longitudinal acceleration"},
     {"id": "PALISADE_YAW_RATE",                  "path": "Orientation", "fmt": {"bix": 144, "len": 8,  "max": 1.275,                                "div": 200,                                                               "unit": "degrees" },                               "name": "Yaw rate"}
+  ]},
+{ "hdr": "730", "rax": "738", "cmd": {"22": "F010"}, "freq": 0.25, "filter": { "from": 2026 }, "dbgfilter": { "from": 2027 },
+  "signals": [
+    {"id": "PALISADE_WHEEL_FR_VSS_HD_26",           "path": "Movement",    "fmt": {"bix": 32,  "len": 16, "max": 2047,                                 "div": 32,                                               "unit": "kilometersPerHour" },                               "name": "Front right wheel speed, high resolution"},
+    {"id": "PALISADE_WHEEL_FL_VSS_HD_26",           "path": "Movement",    "fmt": {"bix": 48,  "len": 16, "max": 2047,                                 "div": 32,                                               "unit": "kilometersPerHour" },                               "name": "Front left wheel speed, high resolution"},
+    {"id": "PALISADE_WHEEL_RR_VSS_HD_26",           "path": "Movement",    "fmt": {"bix": 64,  "len": 16, "max": 2047,                                 "div": 32,                                               "unit": "kilometersPerHour" },                               "name": "Rear right wheel speed, high resolution"},
+    {"id": "PALISADE_WHEEL_RL_VSS_HD_26",           "path": "Movement",    "fmt": {"bix": 80,  "len": 16, "max": 2047,                                 "div": 32,                                               "unit": "kilometersPerHour" },                               "name": "Rear left wheel speed, high resolution"},
+    {"id": "PALISADE_STEERING_ANGLE_26",            "path": "Control",     "fmt": {"bix": 96,  "len": 16, "blsb": true, "max": 3276.7, "min": -3276.8,               "div": 10,                   "sign": true,                             "unit": "degrees"                },                                                  "name": "Steering wheel angle"},
+    {"id": "PALISADE_LATERAL_ACCELERATION_26",      "path": "Orientation", "fmt": {"bix": 112, "len": 16, "blsb": true, "max": 4.177,  "min": -4.177,  "mul": 8.354, "div": 65535, "add": -4.177,                                           "unit": "metersPerSecondSquared" },                                                  "name": "Lateral acceleration"},
+    {"id": "PALISADE_LONGITUDINAL_ACCELERATION_26", "path": "Orientation", "fmt": {"bix": 128, "len": 16, "blsb": true, "max": 4.177,  "min": -4.177,  "mul": 8.354, "div": 65535, "add": -4.177,                                           "unit": "metersPerSecondSquared" },                                                  "name": "Longitudinal acceleration"},
+    {"id": "PALISADE_YAW_RATE_26",                  "path": "Orientation", "fmt": {"bix": 144, "len": 8,  "max": 1.275,                                "div": 200,                                              "unit": "degrees"           },                               "name": "Yaw rate"}
   ]},
 { "hdr": "770", "rax": "778", "cmd": {"22": "BC03"}, "freq": 1, "dbgfilter": { "to": 2019, "from": 2027 },
   "signals": [
