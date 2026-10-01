@@ -1,4 +1,10 @@
-{ "commands": [
+{ "ecu": [
+    { "hdr": "7E0", "type": "engine" },
+    { "hdr": "7E1", "type": "transmission" },
+    { "hdr": "7E3", "type": "motor" },
+    { "hdr": "7E4", "type": "battery" }
+  ],
+  "commands": [
 { "hdr": "730", "rax": "738", "cmd": {"22": "F010"}, "freq": 0.25, "filter": { "to": 2025 }, "dbgfilter": { "to": 2022 },
   "signals": [
     {"id": "PALISADE_WHEEL_FR_VSS_HD",           "path": "Movement",    "fmt": {"bix": 32,  "len": 16, "blsb": true, "max": 2032,                                 "div": 32,                                 "nullmax": 2032,                   "unit": "kilometersPerHour"      },                  "name": "Front right wheel speed, high resolution"},
@@ -506,7 +512,7 @@
   "signals": [
     {"id": "PALISADE_CALC_OIL_T", "path": "Engine", "fmt": {"bix": 304, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Calculated oil temperature"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "E013"}, "freq": 0.25,
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E013"}, "freq": 0.25, "dbgfilter": { "to": 2025, "from": 2027 },
   "signals": [
     {"id": "PALISADE_BRAKE_BOOSTER_P", "path": "Control", "fmt": {"bix": 48, "len": 16, "blsb": true, "max": 1310, "min": -1310, "div": 25, "sign": true, "unit": "unknown" }, "name": "Brake booster pressure"}
   ]},
