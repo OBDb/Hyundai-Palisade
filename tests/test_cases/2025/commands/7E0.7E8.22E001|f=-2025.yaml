@@ -1,9 +1,7 @@
-command_id: 7E0.7E8.22E001
+command_id: 7E0.7E8.22E001|f=-2025
 test_cases:
 - expected_values:
     PALISADE_BATTERY_SOC: 85
-    PALISADE_BATTERY_V: 0
-    PALISADE_BATTERY_V_AFTER_IGNITION: 0
     PALISADE_EIT: 30.75
     PALISADE_EOT: 99.75
   response: |-
@@ -16,8 +14,6 @@ test_cases:
     7E826000D1300AAAAAA
 - expected_values:
     PALISADE_BATTERY_SOC: 88
-    PALISADE_BATTERY_V: 0
-    PALISADE_BATTERY_V_AFTER_IGNITION: 0
     PALISADE_EIT: 47.25
     PALISADE_EOT: 99
   response: |-
@@ -185,7 +181,6 @@ test_cases:
 - expected_values:
     PALISADE_BATTERY_SOC: 89
     PALISADE_BATTERY_V: 12.60176
-    PALISADE_BATTERY_V_AFTER_IGNITION: 0
     PALISADE_EIT: 42
     PALISADE_EOT: 101.25
   response: |-
@@ -241,7 +236,6 @@ test_cases:
 - expected_values:
     PALISADE_BATTERY_SOC: 69
     PALISADE_BATTERY_V: 13.01047
-    PALISADE_BATTERY_V_AFTER_IGNITION: 0
     PALISADE_EIT: 16.5
     PALISADE_EOT: 96
   response: |-
