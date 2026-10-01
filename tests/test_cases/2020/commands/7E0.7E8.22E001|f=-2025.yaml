@@ -1,9 +1,8 @@
-command_id: 7E0.7E8.22E001
+command_id: 7E0.7E8.22E001|f=-2025
 test_cases:
 - expected_values:
     PALISADE_BATTERY_SOC: 83
     PALISADE_BATTERY_V: 13.21482
-    PALISADE_BATTERY_V_AFTER_IGNITION: 0
     PALISADE_EIT: 45.75
     PALISADE_EOT: 90.75
   response: |-
