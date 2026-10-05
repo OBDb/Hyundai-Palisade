@@ -11,4 +11,10 @@ test_cases:
     PALISADE_HL_LOW: 0
   response: |-
     778100B62BC09301FCF
+    77821CC00081000AAAA
+- expected_values:
+    PALISADE_HL_HIGH: 0
+    PALISADE_HL_LOW: 0
+  response: |-
+    778100B62BC09301FCF
     77821CC0008C000AAAA
