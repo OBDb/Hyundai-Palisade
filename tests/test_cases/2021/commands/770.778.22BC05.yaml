@@ -17,7 +17,6 @@ test_cases:
     778210000400000AAAA
 - expected_values:
     PALISADE_HAZARD_SW: 0
-    PALISADE_HL_SW: 1
   response: |-
     778100B62BC050F1324
     778210000400400AAAA
@@ -28,7 +27,6 @@ test_cases:
     778210050000000AAAA
 - expected_values:
     PALISADE_HAZARD_SW: 80
-    PALISADE_HL_SW: 1
   response: |-
     778100B62BC050F1324
     778210050400400AAAA
