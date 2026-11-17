@@ -89,7 +89,7 @@
     {"id": "PALISADE_TID_3", "path": "Tires", "fmt": {"bix": 96,  "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Tire sensor 3 ID"},
     {"id": "PALISADE_TID_4", "path": "Tires", "fmt": {"bix": 128, "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Tire sensor 4 ID"}
   ]},
-{ "hdr": "7A0", "rax": "7A8", "cmd": {"22": "C00B"}, "freq": 15, "filter": { "to": 2025 }, "dbgfilter": { "to": 2019 },
+{ "hdr": "7A0", "rax": "7A8", "cmd": {"22": "C00B"}, "freq": 15, "filter": { "to": 2025 }, "dbgfilter": { "to": 2019, "years": [2022] },
   "signals": [
     {"id": "PALISADE_TP_FL_PRE21", "path": "Tires", "fmt": {"bix": 32,  "len": 8, "max": 51,              "div": 5,             "nullmin": 0,   "unit": "psi"     }, "name": "Tire pressure front left",     "suggestedMetric": "frontLeftTirePressure"},
     {"id": "PALISADE_TT_FL_PRE21", "path": "Tires", "fmt": {"bix": 40,  "len": 8, "max": 205, "min": -50,           "add": -50, "nullmin": -50, "unit": "celsius" }, "name": "Tire temperature front left",  "suggestedMetric": "frontLeftTireTemperature"},
@@ -176,7 +176,7 @@
     {"id": "PALISADE_HVAC_IAT_PASSENGER_VENT",      "path": "Climate", "fmt": {"bix": 64, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Interior temperature, passenger vent"},
     {"id": "PALISADE_HVAC_IAT_PASSENGER_LEGS_VENT", "path": "Climate", "fmt": {"bix": 72, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Interior temperature, passenger legs vent"}
   ]},
-{ "hdr": "7B3", "rax": "7BB", "cmd": {"22": "0102"}, "freq": 1, "dbgfilter": { "to": 2025, "from": 2027 },
+{ "hdr": "7B3", "rax": "7BB", "dbg": true, "cmd": {"22": "0102"}, "freq": 1,
   "signals": [
     {"id": "PALISADE_HVAC_COOLANT_T",  "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "nullmax": 87.5, "unit": "celsius" }, "name": "Coolant temperature"},
     {"id": "PALISADE_HVAC_INVERTER_T", "path": "Engine", "fmt": {"bix": 96, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "nullmax": 87.5, "unit": "celsius" }, "name": "Inverter temperature"}
@@ -467,7 +467,7 @@
     {"id": "PALISADE_WIDE_OPEN_THROTTLE", "path": "Engine",         "fmt": {"bix": 72,  "len": 8, "max": 255,                 "unit": "scalar" }, "name": "Wide open throttle"},
     {"id": "PALISADE_KNOCK_DETECTED_7E0", "path": "Engine",         "fmt": {"bix": 168, "len": 8, "max": 255,                 "unit": "scalar" }, "name": "Knock detected"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E005"}, "freq": 1, "dbgfilter": { "to": 2022, "years": [2024], "from": 2027 },
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E005"}, "freq": 1, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
   "signals": [
     {"id": "PALISADE_GDI_IT_A1", "path": "Engine", "fmt": {"bix": 224, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "nullmax": 6553.5, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank a, 1"},
     {"id": "PALISADE_GDI_IT_A2", "path": "Engine", "fmt": {"bix": 240, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "nullmax": 6553.5, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank a, 2"},
